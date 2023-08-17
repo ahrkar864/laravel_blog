@@ -18,8 +18,8 @@ Route::post('/contact', 'FrontEndController@send_message')->name('website.contac
 
 // Admin Panel Routes
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    
     Route::get('/dashboard','DashboardController@index')->name('dashboard');
-
     Route::resource('category', 'CategoryController');
     Route::resource('tag', 'TagController');
     Route::resource('post', 'PostController');
