@@ -74,7 +74,12 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputPassword1">Description</label>
-                                            <textarea name="description" id="description" rows="4" class="form-control"
+                                            <textarea name="description" id="description" rows="4" class="form-control description"
+                                                placeholder="Enter description">{{ old('description') }}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Description</label>
+                                            <textarea name="description"  rows="4" class="form-control description"
                                                 placeholder="Enter description">{{ old('description') }}</textarea>
                                         </div>
                                     </div>
@@ -100,7 +105,7 @@
 @section('script')
     <script src="{{ asset('/admin/js/summernote-bs4.min.js') }}"></script>
     <script>
-        $('#description').summernote({
+        $('.description').summernote({
             placeholder: 'Hello Bootstrap 4',
             tabsize: 2,
             height: 300
